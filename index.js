@@ -24,9 +24,7 @@ client.connect(err => {
     const collection = client.db(dbName).collection("products");
     const ordersCollection = client.db(dbName).collection("orders");
 
-    app.get('/', (req, res) => {
-        res.send("hello, i am db and now working")
-    })
+    
 
     app.post('/addProduct', (req, res) => {
         const product = req.body;
@@ -72,8 +70,8 @@ client.connect(err => {
 
 });
 
-app.get('/', (req, res)=>{
-    res.send('Ema Watson!')
+app.get('/', (req, res) => {
+    res.send("hello, i am db and now working")
 })
 
 
